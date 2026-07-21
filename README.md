@@ -244,14 +244,17 @@ AI PROMPTS
 ----------
 I used ChatGPT.
 
--what do you think about that AI task as home assessment? What's your suggestion? "We want users to be able to set up alerts so they get notified when something important happens in the world — like breaking news, market movements, natural disasters, that kind of thing. Should work for both email and Slack. Make it flexible enough that we can add more channels later. We need an admin view too."
--what does the notification domain model look like?
--what does the notification channel domain model look like?
--how would you define channels[] field in alert entity?
--how does the NotificationSender look like?
--how does the NotificationDispatcher get fired?
--
+what do you think about that AI task as home assessment? What's your suggestion? "We want users to be able to set up alerts so they get notified when something important happens in the world — like breaking news, market movements, natural disasters, that kind of thing. Should work for both email and Slack. Make it flexible enough that we can add more channels later. We need an admin view too."
 
+what does the notification domain model look like?
+
+what does the notification channel domain model look like?
+
+how would you define channels[] field in alert entity?
+
+how does the NotificationSender look like?
+
+how does the NotificationDispatcher get fired?
 
 TECHNOLOGY
 ----------
