@@ -10,6 +10,7 @@ import hu.teszakt.homework.sonrisa.service.AlertEvaluatorService;
 import hu.teszakt.homework.sonrisa.service.EventService;
 import hu.teszakt.homework.sonrisa.service.NotificationService;
 import hu.teszakt.homework.sonrisa.service.exception.AlertException;
+import hu.teszakt.homework.sonrisa.service.mapper.EventMapper;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -23,6 +24,7 @@ import java.util.List;
 public class EventServiceImpl extends AbstractBaseService implements EventService {
 
     private final EventRepository eventRepository;
+    private final EventMapper eventMapper;
     private final AlertEvaluatorService alertEvaluatorService;
     private final NotificationService notificationService;
 
@@ -30,8 +32,7 @@ public class EventServiceImpl extends AbstractBaseService implements EventServic
     public EventCreationResponse createEvent(@NonNull EventCreationRequest request) {
         log.debug("Running createEvent service method for event: {}", request.getEvent().getAlertType());
         try {
-            // TODO mapstruct mapping
-            final EventEntity eventEntity = null;
+            final EventEntity eventEntity = eventMapper.mapToEventEntity(request);
             eventRepository.save(eventEntity);
 
             final List<AlertEntity> matchingAlerts = alertEvaluatorService.findMatchingAlerts(request.getEvent());
