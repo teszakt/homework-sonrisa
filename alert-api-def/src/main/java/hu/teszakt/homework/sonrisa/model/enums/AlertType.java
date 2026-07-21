@@ -5,9 +5,9 @@ import lombok.Getter;
 
 public enum AlertType {
 
-    BREAKING_NEWS("breaking_news"),
-    MARKET_MOVEMENT("market_movement"),
-    NATURAL_DISASTER("natural_disaster");
+    BREAKING_NEWS("breakingNews"),
+    MARKET_MOVEMENT("marketMovement"),
+    NATURAL_DISASTER("naturalDisaster");
 
     @Getter
     @JsonValue
