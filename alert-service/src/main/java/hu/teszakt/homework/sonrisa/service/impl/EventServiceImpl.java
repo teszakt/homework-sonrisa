@@ -4,7 +4,7 @@ import hu.teszakt.homework.sonrisa.db.entity.AlertEntity;
 import hu.teszakt.homework.sonrisa.db.entity.EventEntity;
 import hu.teszakt.homework.sonrisa.db.repository.EventRepository;
 import hu.teszakt.homework.sonrisa.model.EventCreationResponse;
-import hu.teszakt.homework.sonrisa.model.enums.EventCreationRequest;
+import hu.teszakt.homework.sonrisa.model.EventCreationRequest;
 import hu.teszakt.homework.sonrisa.service.AbstractBaseService;
 import hu.teszakt.homework.sonrisa.service.AlertEvaluatorService;
 import hu.teszakt.homework.sonrisa.service.EventService;
