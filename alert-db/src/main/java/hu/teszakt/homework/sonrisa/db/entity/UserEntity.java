@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user_data")
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
