@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.time.OffsetDateTime;
 
 @Data
-public class EventDTO implements Serializable {
+public class Event implements Serializable {
 
     @NonNull
     private final AlertType alertType;

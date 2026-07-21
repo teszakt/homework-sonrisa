@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Data
-public class AlertDTO implements Serializable {
+public class Alert implements Serializable {
 
     private long userId;
     @NonNull
