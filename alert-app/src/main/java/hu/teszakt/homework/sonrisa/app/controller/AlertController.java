@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Log4j2
 @RequiredArgsConstructor
 @RequestMapping(
-        name = "user",
+        value = "alert",
         consumes = MediaType.APPLICATION_JSON_VALUE,
         produces = MediaType.APPLICATION_JSON_VALUE
 )
@@ -23,7 +23,7 @@ public class AlertController {
 
     private final AlertService alertService;
 
-    @PostMapping(name = "add")
+    @PostMapping(value = "add")
     public AlertCreationResponse createAlert(@RequestBody AlertCreationRequest request) {
         log.debug("Running createAlert controller method");
         final AlertCreationResponse response = alertService.createAlert(request);
