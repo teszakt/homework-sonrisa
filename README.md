@@ -21,6 +21,13 @@ alert-model (h2 db (or any other), entities, repositories)
 alert-service (business logic, notifications, mappers for entity and dto, custom exceptions)
 alert-app (runnable application, REST controllers, global exception handling, application.yml)
 
+Firstly, I initialize the modules with the essential dependencies. Then I can populate them later with Java classes/implementation.
+API first approach (create model/endpoint then implement the business logic)
+application.yml
+log4j2
+domain model
+business logic
+
 ASSUMPTIONS
 -----------
 Alerts are user defined.
@@ -46,10 +53,12 @@ contentType - application/json
 RequestBody, ResponseBody and optional PathVariables/QueryParams
 APIs and its model later can be generated from OpenAPI api.yaml file (openapi-generator-maven-plugin)
 
+POST /user
 POST /alert
+POST /event
+
 GET /alert
 DELETE /alert
-POST /event
 GET /admin/notification
 
 NOTIFICATION ABSTRACTION
@@ -108,3 +117,10 @@ I used ChatGPT.
 -
 -
 -
+
+
+TECHNOLOGY
+----------
+Java 21
+SpringBoot 3.5.x
+H2 database for simplicity
