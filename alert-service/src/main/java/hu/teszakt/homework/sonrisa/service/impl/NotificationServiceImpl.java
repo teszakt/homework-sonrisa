@@ -24,14 +24,18 @@ public class NotificationServiceImpl implements NotificationService {
     public void notify(List<AlertEntity> alerts, Event event) {
         log.debug("Notification notify called");
         for (AlertEntity alert : alerts) {
-            // TODO create entity
-            final NotificationEntity notificationEntity = null;
+            final NotificationEntity notificationEntity = createNotification(alert, event);
             notificationRepository.save(notificationEntity);
 
             // TODO handle channelType
 //            notificationDispatcher.dispatch(channelType, notificationEntity);
         }
         log.debug("Notification notify successfully finished.");
+    }
+
+    private NotificationEntity createNotification(AlertEntity alertEntity, Event event) {
+        // TODO impl
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }

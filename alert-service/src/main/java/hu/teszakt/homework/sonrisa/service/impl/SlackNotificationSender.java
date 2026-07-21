@@ -17,6 +17,7 @@ public class SlackNotificationSender extends NotificationSender {
 
     @Override
     protected void send(NotificationEntity notificationEntity) {
+        // TODO impl
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

@@ -24,8 +24,9 @@ public class AlertEvaluatorServiceImpl implements AlertEvaluatorService {
     public List<AlertEntity> findMatchingAlerts(@NonNull Event event) {
         log.info("Running findMatchingAlerts method for event {} {}", event.getAlertType(), event.getMessage());
         try {
-            // TODO find alerts from database
+            // TODO find and evaluate alerts from database
             final List<AlertEntity> alerts = new ArrayList<>();
+            log.info("Found {} alerts", alerts.size());
 
             log.info("findMatchingAlerts method successfully finished");
             return alerts;

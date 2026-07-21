@@ -17,6 +17,7 @@ public class EmailNotificationSender extends NotificationSender {
 
     @Override
     protected void send(NotificationEntity notification) {
+        // TODO impl based on emailClient
         throw new UnsupportedOperationException("Not supported yet");
     }
 
