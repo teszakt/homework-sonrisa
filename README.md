@@ -281,7 +281,7 @@ I used ChatGPT.
 -what does the notification channel domain model look like?
 -how would you define channels[] field in alert entity?
 -how does the NotificationSender look like?
--
+-how does the NotificationDispatcher get fired?
 -
 
 
