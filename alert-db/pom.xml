@@ -37,6 +37,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>hu.teszakt.homework.sonrisa</groupId>
+            <artifactId>alert-api-def</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
