@@ -1,6 +1,6 @@
 package hu.teszakt.homework.sonrisa.db.entity;
 
-import hu.teszakt.homework.sonrisa.model.enums.NotificationStatus;
+import hu.teszakt.homework.sonrisa.model.enums.NotificationStatusType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -40,7 +40,7 @@ public class NotificationEntity extends AbstractEntity {
     @NotNull
     @Column(name = "status", nullable = false)
     @Enumerated(EnumType.ORDINAL)
-    private NotificationStatus status;
+    private NotificationStatusType status;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "notification")
     private List<NotificationDeliveryEntity> deliveries;

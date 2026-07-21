@@ -1,7 +1,7 @@
 package hu.teszakt.homework.sonrisa.db.entity;
 
 import hu.teszakt.homework.sonrisa.model.enums.NotificationChannelType;
-import hu.teszakt.homework.sonrisa.model.enums.NotificationDeliveryStatus;
+import hu.teszakt.homework.sonrisa.model.enums.NotificationDeliveryStatusType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -34,7 +34,7 @@ public class NotificationDeliveryEntity extends AbstractEntity {
     @NotNull
     @Column(name = "status", nullable = false)
     @Enumerated(EnumType.ORDINAL)
-    private NotificationDeliveryStatus status;
+    private NotificationDeliveryStatusType status;
     @NotNull
     @Column(name = "sent_at", nullable = false)
     private OffsetDateTime sentAt;

@@ -3,7 +3,7 @@ package hu.teszakt.homework.sonrisa.model.enums;
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Getter;
 
-public enum NotificationStatus {
+public enum NotificationStatusType {
 
     CREATED("created"),
     IN_PROGRESS("inProgress"),
@@ -15,7 +15,7 @@ public enum NotificationStatus {
     @JsonValue
     private final String value;
 
-    NotificationStatus(String value) {
+    NotificationStatusType(String value) {
         this.value = value;
     }
 
