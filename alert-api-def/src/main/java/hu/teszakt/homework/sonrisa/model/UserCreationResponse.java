@@ -9,4 +9,8 @@ import java.io.Serializable;
 @Data
 public class UserCreationResponse extends AbstractResponse implements Serializable {
 
+    public UserCreationResponse(long id) {
+        super(id);
+    }
+
 }

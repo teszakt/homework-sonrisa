@@ -8,4 +8,9 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class EventCreationResponse extends AbstractResponse implements Serializable {
+
+    public EventCreationResponse(long id) {
+        super(id);
+    }
+
 }
