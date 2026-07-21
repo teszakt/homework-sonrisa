@@ -6,6 +6,6 @@ import org.springframework.lang.NonNull;
 
 public interface UserService {
 
-    UserCreationResponse createUser(@NonNull UserCreationRequest name);
+    UserCreationResponse createUser(@NonNull UserCreationRequest request);
 
 }

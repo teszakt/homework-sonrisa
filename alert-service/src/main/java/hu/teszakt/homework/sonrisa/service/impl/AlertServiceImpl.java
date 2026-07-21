@@ -14,6 +14,10 @@ public class AlertServiceImpl extends AbstractBaseService implements AlertServic
 
     @Override
     public AlertCreationResponse createAlert(@NonNull AlertCreationRequest request) {
+        log.debug("Running createAlert service method for event: {}", request.getAlert().getAlertType());
+        // TODO impl
+
+        log.debug("createAlert service method successfully finished");
         throw new UnsupportedOperationException("Not supported yet");
     }
 

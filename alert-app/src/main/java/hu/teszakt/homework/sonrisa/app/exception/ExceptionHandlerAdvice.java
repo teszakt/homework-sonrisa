@@ -1,5 +1,6 @@
 package hu.teszakt.homework.sonrisa.app.exception;
 
+import hu.teszakt.homework.sonrisa.service.exception.AlertException;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -17,6 +18,15 @@ public class ExceptionHandlerAdvice {
     )
     public ProblemDetail handleException(Exception ex) {
         log.error("Exception occured: ", ex);
+        return ProblemDetail.forStatusAndDetail(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
+    }
+
+    @ExceptionHandler(
+            exception = AlertException.class,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ProblemDetail handleAlertException(Exception ex) {
+        log.error("Alert exception occured: ", ex);
         return ProblemDetail.forStatusAndDetail(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
     }
 
