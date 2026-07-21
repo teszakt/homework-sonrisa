@@ -256,6 +256,9 @@ how does the NotificationSender look like?
 
 how does the NotificationDispatcher get fired?
 
+Time to time I had to analyze and decide if I got the exact answer by prompting the AI. Sometimes the response didn't contain the exact information. Ocassionally, AI give a response which was too complex. 
+So I had to get over these difficulties during my AI prompting. But I would say AI can give a good perspective or starting point for any problem, but then a human need to evaluate the AI response.
+
 TECHNOLOGY
 ----------
 Java 21
