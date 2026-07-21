@@ -2,6 +2,7 @@ package hu.teszakt.homework.sonrisa.app.controller;
 
 import hu.teszakt.homework.sonrisa.model.UserCreationRequest;
 import hu.teszakt.homework.sonrisa.model.UserCreationResponse;
+import hu.teszakt.homework.sonrisa.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.MediaType;
@@ -19,8 +20,13 @@ import org.springframework.web.bind.annotation.RestController;
 )
 public class UserController {
 
+    private final UserService userService;
+
     public UserCreationResponse createUser(@RequestBody UserCreationRequest request) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        log.debug("Running createUser controller method");
+        final UserCreationResponse response = userService.createUser(request);
+        log.debug("createUser controller method successfully finished");
+        return response;
     }
 
 }
