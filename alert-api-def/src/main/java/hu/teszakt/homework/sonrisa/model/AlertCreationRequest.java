@@ -11,6 +11,6 @@ import java.io.Serializable;
 public class AlertCreationRequest extends AbstractRequest implements Serializable {
 
     @NonNull
-    private AlertDTO alert;
+    private Alert alert;
 
 }
