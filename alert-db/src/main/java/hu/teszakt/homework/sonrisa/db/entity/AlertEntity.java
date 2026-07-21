@@ -1,7 +1,9 @@
 package hu.teszakt.homework.sonrisa.db.entity;
 
 import hu.teszakt.homework.sonrisa.model.enums.AlertType;
+import hu.teszakt.homework.sonrisa.model.enums.NotificationChannelType;
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -16,6 +18,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "alert")
@@ -34,6 +37,9 @@ public class AlertEntity extends AbstractEntity {
     @NotNull
     @Column(name = "criteria", nullable = false)
     private String criteria;
+    @Column(name = "channels", nullable = false)
+    @Enumerated(EnumType.ORDINAL)
+    private List<NotificationChannelType> channels;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "alert")
     private List<NotificationEntity> notifications;
