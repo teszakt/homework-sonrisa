@@ -22,6 +22,7 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public void notify(List<AlertEntity> alerts, Event event) {
+        log.debug("Notification notify called");
         for (AlertEntity alert : alerts) {
             // TODO create entity
             final NotificationEntity notificationEntity = null;
@@ -30,6 +31,7 @@ public class NotificationServiceImpl implements NotificationService {
             // TODO handle channelType
 //            notificationDispatcher.dispatch(channelType, notificationEntity);
         }
+        log.debug("Notification notify successfully finished.");
     }
 
 }

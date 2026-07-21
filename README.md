@@ -206,21 +206,6 @@ RESPONSE
 	"id": 1 (generated on persistence level)
 }
 
-optional endpoints for upcoming features
-GET /alert/all
-returns all alert
-
-GET /user/{id}
-returns user by id
-
-GET /alert/{id}
-returns alert by id
-
-DELETE /alert/{id}
-deletes alert by id
-
-GET /admin/notification
-
 NOTIFICATION ABSTRACTION
 ------------------------
 For simplicity users, events and alerts are created through REST endpoints.
@@ -256,9 +241,10 @@ ResponseBody (RequestBody or PathVariables/QueryParams for filtering - e.g. use,
 
 GET /admin/alerts
 GET /admin/alert/{id}
-GET /admin/notifications
 GET /admin/users
 GET /admin/user/{id}
+GET /admin/notifications
+GET /admin/notificationDeliveries
 
 Authentication can be implemented later (for admin purpose). 
 
